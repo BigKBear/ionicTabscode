@@ -16,13 +16,24 @@
     <ion-side-menus>
       <ion-side-menu-content>
         <ion-nav-bar class="bar-stable">
+          <ion-nav-buttons side ="left">
+            <button menu-toggle="left"
+                    class="button button-icon button-clear ion-navicon"></button>
+          </ion-nav-buttons>
           <ion-nav-back-button></ion-nav-back-button>
         </ion-nav-bar>
         <ion-nav-view></ion-nav-view>
       </ion-side-menu-content>
       <ion-side-menu side="left">
-        <ion-content class="padding">
-          No new messages.
+      <ion-header-bar class="bar-stable">
+            <h1 class="title"> Menu
+            </h1>
+          </ion-header-bar>
+        <ion-content>          
+          <ion-list>
+            <ion-item menu-close href="#/home">Home</ion-item>
+            <ion-item menu-close href="#/settings">Settings</ion-item>
+          </ion-list>
         </ion-content>
       </ion-side-menu>
     </ion-side-menus>
