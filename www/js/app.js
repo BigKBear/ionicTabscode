@@ -4,33 +4,19 @@ var app = angular.module('app', ['ionic'])
 
 app.config(function($stateProvider, $urlRouterProvider){
 
-  $stateProvider
+  $stateProvider.state('home', {
+    url: '/home',
+    templateUrl: 'templates/home.html'
+  });
 
-  .state('home',{
-    url:'/home',
-    views:{
-      'tab-home':{
-        templateUrl:'templates/home.html'
-      }
-    }
-  })
+  $stateProvider.state('details', {
+    url: '/details',
+    templateUrl: 'templates/details.html'
+  });
 
-  .state('details',{
-    url:'/details',
-    views:{
-      'tab-home':{
-        templateUrl:'templates/details.html'
-      }
-    }
-  })
-
-  .state('settings',{
-    url:'/settings',
-    views:{
-      'tab-settings':{
-        templateUrl: 'templates/settings.html'
-      }
-    }
+  $stateProvider.state('settings', {
+    url: '/settings',
+    templateUrl: 'templates/settings.html'
   });
   
   $urlRouterProvider.otherwise('/home');
